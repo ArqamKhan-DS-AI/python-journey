@@ -8,7 +8,9 @@ def process_data(input_file: str, output_file: str) -> None:
             reader = csv.DictReader(infile) # DictReader turns each row into a dictionary
             
             engineers = []
+
             for row in reader:
+                
                 if row["role"] == "Engineer":
                     engineers.append(row)
                     
